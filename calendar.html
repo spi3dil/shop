@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Index - Demo</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--if IE script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")-->
+    <!--Media queries-->
+    <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--CSS LINKS--><!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" media="screen, projection"><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" media="screen, projection"><![endif]-->
+    <!--Main style-->
+    <link href="css/calendar/calendar.css" rel="stylesheet" media="screen">
+    <link href="css/calendar/responsive-calendar.css" rel="stylesheet" media="screen">
+
+  </head>
+  <body>
+  
+  
+	<div id="eventCalendar">
+		<p class="add-date">добавить мероприятие</p>
+		<div class="user-form-date">
+			<form class="calendar-form">
+				<div class="date-form">
+				
+				<table class="form-date-time">
+					<tr>
+						<td>01</td>
+						<td>01</td>
+						<td>2017</td>
+						<td>12</td>
+						<td>00</td>
+					</tr>
+					<tr>
+						<td><input type="text" placeholder="дн" maxlength="2" pattern="[0-9]" class="input-style"></td>
+						<td><input type="text" placeholder="мц" maxlength="2" class="input-style"></td>
+						<td><input type="text" placeholder="год" maxlength="4" class="input-style year"></td>
+						<td><input type="text" placeholder="час" maxlength="2" class="input-style"></td>
+						<td><input type="text" placeholder="мин" maxlength="2" class="input-style"></td>
+					</tr>
+				</table>
+				<input type="text" placeholder="название мероприятия" class="input-style">
+				<textarea name="comment" cols="33" rows="10" class="description-form" placeholder="Описание"></textarea>
+				<input type="submit" value="Добавить" class="button-form">
+				</div>
+			</form>
+		</div>
+	</div>
+ 
+    <!--SCRIPT LINKS-->
+    <!--Jquery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--UI-->
+    <script src="js/calendar/calendar.js"></script>
+    <script src="js/calendar/moment.js"></script>
+	<script>
+		$(function(){
+		var data = [
+			{"date": "2017-02-10 10:10:10", "title": "Событие_1", "description": "asdads"}
+		];		
+			$('#eventCalendar').eventCalendar({
+				jsonData: data,
+				jsonDateFormat: 'human'
+			});
+		});
+		
+		
+		
+
+	</script>
+	<script>
+		$(function() {
+			$(".add-date").click(function() {
+				$(".user-form-date").slideToggle("slow");
+				$(this).toggleClass("active"); return false;
+			});
+		});
+</script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - wrd_RCEQ13990252@109.228.7.108" uuid="d96c34c3-7c7a-4985-98f4-ccc16d5f9187">
+      <secret-storage>master_key</secret-storage>
+      <user-name>user_48jW1NSR2b5</user-name>
+      <introspection-scope>wrd_RCEQ13990252:</introspection-scope>
+      <resolve-scope>wrd_RCEQ13990252:</resolve-scope>
+    </data-source>
+  </component>
+</project>
